@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WhatsApp UI</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* PHONE BODY */
+body
+{
+    background-color: plum;
+}
+.phone{
+    width: 280px;
+    height: 570px;
+    background-color: rgb(22, 22, 22);
+    position: absolute;
+    left: 15%;
+    top: 4%;
+    border-radius: 30px;
+    border: 7px solid black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* NOTCH */
+.nodge{
+    width: 24px;
+    height: 25px;
+    background-color: black;
+    border-radius: 50%;
+    margin-top: -6px;
+}
+
+/* HEADER */
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 15px;
+}
+
+.header img{
+    width: 92px;
+    height: 20px;
+}
+
+.icons i{
+    color: rgb(197, 197, 197);
+    margin-left: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* SEARCH BAR */
+.search{
+    width: 90%;
+    margin-top: 10px;
+}
+
+.search input{
+    width: 100%;
+    padding: 10px 15px;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    bottom: 15px;
+    /* outline: none; */
+    background-color: #2a2a2a;
+    color: white;
+    font-size: 14px;
+}
+
+.search input::placeholder{
+    color: #b5b5b5;
+}
+.butts button
+{
+    border-radius: 12px;
+    background-color: transparent;
+    border: 1px solid #3b3b3b;
+    color: rgb(155, 155, 155);
+    font-size:10px;
+    padding: 5px;
+    cursor: pointer;
+    
+}
+.arch
+{
+    color: rgb(194, 194, 194);
+    position: relative;
+    left: 15px;
+    top: 10px;
+    font-size: 1;
+    
+}
+.arch i{
+    position: relative;
+    left: 8px;
+}
+.chat img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    position: static; /* VERY IMPORTANT */
+}
+.chat h3, chat p
+{
+    margin: 0;
+
+    
+}
+.chat {
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+.chat .chat_info
+{
+    position: relative;
+    color: white;
+    font-family: roboto,sans-serif;
+    font-size: 16px;
+    color:#e7e7e7;
+    font-weight: 500;
+}
+.chat p
+{
+    color: #667781;
+    font-size: 14px;
+}
+.icons 
+{
+    position: absolute;
+     left: 165px;
+    margin-left: 10px;
+    
+}
+/* --- to scroll the chats --- */
+.chat-list {
+    width: 100%;
+    flex: 1;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+.chat-list::-webkit-scrollbar {
+    width: 3px;
+}
+.chat-list::-webkit-scrollbar-thumb {
+    background: #555;
+    border-radius: 20px;
+}
+/* ---footer--- */
+footer
+{
+    width: 100%;
+    height: 55px;
+    background-color: rgb(27, 27, 27);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+footer 
+{
+    color: white;
+    display: flex;
+}
+footer i{
+    position: relative;
+    left: 26px; top: 8px;
+}
+footer i:hover
+{
+   color: greenyellow;
+}
+footer p
+{
+    position: relative;
+    top: 28px;
+    font-size:14px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="phone">
+    <div class="nodge"></div>
+
+    <div class="header">
+        <img src="logo.png" alt="logo">
+        <div class="icons">
+         <i class="fa-solid fa-qrcode"></i>
+         <i class="fa-solid fa-camera"></i>
+         <i class="fa-solid fa-ellipsis-vertical"></i>
+
+        </div>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Ask Meta AI or Search">
+    </div>
+    <div class="butts">
+    <button>All</button>
+    <button>Unread</button>
+    <button>Favrourites</button>
+    <button>Group</button>
+    <button>Chats 10</button>
+    <button>+</button>
+    <div class="arch">
+   <i class="fa-solid fa-box-archive"></i> <span style="margin-left: 15px;font-family: Arial, Helvetica, sans-serif; font-size: 14px;">Archived</span>
+</div>
+</div>
+
+
+<div class="chat-list">
+    <div class="chat">
+        <img src="dp5.png">
+        <div class="chat_info">
+        <h4>Samruddhi</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+         <div class="chat">
+        <img src="dp8.jpg">
+        <div class="chat_info">
+        <h4>Ayan Bro</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+        
+
+         <div class="chat">
+        <img src="dp14.jpeg">
+        <div class="chat_info">
+        <h4>Rukaiyya</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+        <div class="chat">
+        <img src="dp4.jpeg">
+        <div class="chat_info">
+        <h4>Koyal</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+        <div class="chat">
+        <img src="dp7.jpg">
+        <div class="chat_info">
+        <h4>Krishu</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+        <div class="chat">
+        <img src="dp6.webp">
+        <div class="chat_info">
+        <h4>Sanjana</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+        <div class="chat">
+        <img src="dp7.jpg">
+        <div class="chat_info">
+        <h4>Naazish ma`am</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+        <div class="chat">
+        <img src="dp10.jpeg">
+        <div class="chat_info">
+        <h4>Aayesha ma`am</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+          <div class="chat">
+        <img src="dp13.jpeg">
+        <div class="chat_info">
+        <h4>Vaibhav</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+        <div class="chat">
+        <img src="dp12.jpg">
+        <div class="chat_info">
+        <h4>Omkar</h4>
+        <p>Last Message</p>
+        </div>
+        </div>
+
+
+    </div>
+        <footer>
+        <i class="fa-solid fa-comments"></i>   
+        <p>Chats</p>  
+        <i class="fa-solid fa-circle-notch"></i>
+        <p>updates</p>
+        <i class="fa-solid fa-users" style="position: relative; left: 45px;"></i>  
+        <p>Communities</p>     
+        <i class="fa-solid fa-phone" style="position: relative;"></i>
+        <p>Calls</p>     
+
+        </footer>
+        </div>
+        
+        </div>
+
+
+    </div>
+    </div>
+</div>
+
+</body>
+</html>
